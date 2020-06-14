@@ -7,9 +7,14 @@
             Tambah Data Siswa
         </button>
 
-        <div class="input-group mb-3">
-          <input type="text" class="form-control keyword" placeholder="Cari siswa">
-        </div>
+        <form action="<?=BASEURL?>/mahasiswa/search" method="post">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control keyword" placeholder="Cari siswa" name="keyword" autocomplete="off">
+            <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Cari</button>
+            </div>
+          </div>
+        </form>
 
             <ul class="list-group">
                 <?php foreach ($data['mhs'] as $mhs):?>

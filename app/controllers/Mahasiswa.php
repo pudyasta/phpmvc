@@ -54,17 +54,15 @@
             }
         }
 
-        public function carisiswa(){
-
-            var_dump($data['mhs']=$this->model('Mahasiswa_model')->caridatasiswa());
-
-        }
-
-        public function ajax($keyword=""){
-            $data['mhs']=$this->model('Mahasiswa_model')->caridatasiswa($keyword);
-            $this->view('/mahasiswa/ajax', $data);
+        public function search(){
+            $data['mhs']=$this->model('Mahasiswa_model')->caridatasiswa();
+            $this->view('/templates/header');
+            $this->view('/mahasiswa/index', $data);
             $this->view('/templates/footer');
+
         }
-    }
+
+     }
+    
 
 ?>

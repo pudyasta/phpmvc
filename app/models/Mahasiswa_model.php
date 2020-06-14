@@ -50,7 +50,8 @@
             return $this->db->rowCount();
         }
 
-        public function caridatasiswa($keyword){
+        public function caridatasiswa(){
+            $keyword = $_POST['keyword'];
             $query=("SELECT * FROM mahasiswa WHERE nama LIKE :keyword");
 
             $this->db->query($query);

@@ -29,8 +29,5 @@ $(document).ready(function(){
             }
         });
     });
-
-    $('.keyword').on('keyup', function(){
-            $('.list-group').load('http://localhost/phpmvc/public/mahasiswa/ajax/'+ $('.keyword').val() );
-        });
-    });
+});
+ 
